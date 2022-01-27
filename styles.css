@@ -1,0 +1,156 @@
+/* HEADER HEADER */
+
+.me-header {
+
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.header-wrapper i {
+
+    font-size: 2em;
+    padding: 15px;
+    cursor: pointer;
+    color: blueviolet;
+}
+
+
+
+/* SIDENAV SIDENAV */
+
+/* nav is hidden by a negative margin-left property*/
+
+.nav {
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50em;
+    margin-left: -50em;
+    height: 100vh;
+    background-color: blueviolet;
+    opacity: 0;
+    transition: 1s all;
+    pointer-events: none;
+}
+
+/* active class realigns the nav within thepage and increases width to 20em on Mob devices while also allowing responsiveness on other devices */
+
+.nav.active {
+
+    width: 20em;
+    margin-left: 0;
+    transition: 1s all;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    opacity: 100;
+    pointer-events: all;
+}
+.nav-list {
+
+    list-style: none;
+    padding: 20px 10px;
+    color: white;
+    text-align: end;
+    
+}
+
+
+.fa-times {
+
+    position: absolute;
+    right: 0;
+    font-size: 1.8em;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.fa-times:hover {
+
+    transform: scale(1.05);
+}
+
+.fa-plus, .fa-minus {
+
+    font-size: 0.7em;
+    margin-left: 5px;
+    
+}
+
+a {
+
+    text-decoration: none;
+    color: white;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+}
+
+
+
+/* I don't like to use too many classes so when i can i select elements by the parent class + tagname */
+
+.nav-list li {
+
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    letter-spacing: 0.05em;
+    transition: 0.3s;
+}
+
+/* background color added on hover to show that these list items are clickable */
+/* Transitions added to ensure smooth opening and closing of side menu */
+
+.nav-list li:hover {
+
+    background-color: rgb(168, 106, 226);
+    transition: 0.3s;
+}
+
+/* secondary list hidden by default and visible when the active class is added */
+
+.sports-layer-list{
+
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+   
+}
+
+.sports-layer-list.active {
+
+    height: fit-content;
+    list-style: none;
+    padding: 10px 0;
+    transition: 0.3s;
+}
+
+.sports-layer-list li{
+
+    padding: 5px;
+    font-size: 1.1em;
+    
+}
+
+@media (min-width: 800px) {
+
+    /* width adjustment for desktop to keep it looking proportinate */
+
+    .nav.active {
+
+        width: 20em;
+       
+    }
+}
+
+/* Width adjustment for extremely small devices */
+
+@media (max-width: 300px) {
+
+    .nav.active {
+
+        width: 15em;
+    }
+}

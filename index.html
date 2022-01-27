@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- added a font awesome menu and close button to keep things simple -->
+    <script src="https://kit.fontawesome.com/7c7d76f4cc.js" crossorigin="anonymous"></script>
+
+    <!-- Imported a google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- header which wraps the menu toggle and also a page header (which i did not include) -->
+    <header>
+        <div class="header-wrapper">
+            <i id='menu-bar' class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Created a menu of things that I love, secondary level accessible by clicking on the sports link-->
+    <!-- All menu items are wrapped in anchor tags as these items wouldnormally  be links -->
+    <aside>
+        <nav class="nav">
+            <i id='close-btn' class="fas fa-times"></i>
+            <h1 class="me-header">Love...</h1>
+            <ul class="nav-list">
+                <li><a href="#">Running</a></li>
+                <li><a href="#">Family</a></li>
+                <li id='sports-layer'><a href="#">Sports</a><i class="fas fa-plus"></i><i class="fas fa-minus" style='display: none'></i></li>
+                <ul class="sports-layer-list">
+                    <li><a href="#">Rugby</a></li>
+                    <li><a href="#">Ice Hockey</a></li>
+                    <li><a href="#">Football</a></li>
+                </ul>
+                <li><a href="#">Cooking</a></li>
+                <li><a href="#">Travelling</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <script src="sandbox.js"></script>
+</body>
+</html>
